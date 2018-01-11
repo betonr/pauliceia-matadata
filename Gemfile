@@ -58,6 +58,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'blacklight'
+gem 'geoblacklight'
 gem 'teaspoon'
 gem 'teaspoon-jasmine'
 group :development, :test do
