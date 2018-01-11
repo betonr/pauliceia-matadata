@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 class SolrDocument
-  include Blacklight::Solr::Document
+ include Blacklight::Solr::Document
  include Geoblacklight::SolrDocument
 
   # self.unique_key = 'id'
