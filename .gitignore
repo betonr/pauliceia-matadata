@@ -22,5 +22,5 @@
 
 .byebug_history
 
-# Ignore encrypted secrets key file.
-config/secrets.yml.key
+config/database.yml
+config/secrets.yml
