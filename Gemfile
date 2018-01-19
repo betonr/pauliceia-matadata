@@ -47,7 +47,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'geoblacklight', :git => 'git://github.com/betonr/geoblacklight-pauliceia.git'
+gem 'geoblacklight', :git => 'git://github.com/Pauliceia/dev-geoblacklight.git'
 
 group :production do
   gem 'pg', '~> 0.18'
