@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   
   mount Blacklight::Engine => '/'
-    resources :users
     root to: "catalog#index"
       concern :searchable, Blacklight::Routes::Searchable.new
 
@@ -24,7 +23,6 @@ Rails.application.routes.draw do
       end
     end
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   mount Geoblacklight::Engine => 'geoblacklight'
         concern :gbl_exportable, Geoblacklight::Routes::Exportable.new
         resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog' do

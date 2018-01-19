@@ -8,9 +8,6 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'pg', '~> 0.18'
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -48,20 +45,18 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
 end
 
-group :development do
-  gem 'capistrano', '~> 3.10', '>= 3.10.1'
-  gem 'capistrano-rails', '~> 1.3', '>= 1.3.1'
-  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.3'
-  gem 'capistrano-passenger'
-end
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'geoblacklight', :git => 'git://github.com/betonr/geoblacklight-pauliceia.git'
 
+group :production do
+  gem 'pg', '~> 0.18'
+end
+
 gem 'blacklight', '>= 6.3'
 group :development, :test do
   gem 'solr_wrapper', '>= 0.3'
+  gem 'sqlite3'
 end
 
 gem 'rsolr', '>= 1.0'
